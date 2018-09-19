@@ -31,6 +31,9 @@
         
         weakSelf.textViewH.constant = height;
         
+        IQKeyboardManager *manager =[IQKeyboardManager sharedManager];
+        //当输入框位置变动时刷新位置
+        [manager reloadLayoutIfNeeded];
         [weakSelf.contentView updateConstraints];
         [weakSelf.contentView updateConstraintsIfNeeded];
         [UIView animateWithDuration:0.25 animations:^{
